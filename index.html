@@ -6,26 +6,52 @@
     <title>Athulya K R | Aspiring Computer Science Engineer</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Use Inter font -->
+    
+    <!-- Custom CSS for Aesthetic Enhancements -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        /* Custom Styles to enhance the Tailwind design */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f7f9fc; /* Light background */
+            /* Vibrant vertical gradient background (light cyan/white) */
+            background: linear-gradient(180deg, #ccfbf1 0%, #f7f9fc 50%, #ccfbf1 100%);
+            background-attachment: fixed;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Define a custom, deeper shadow for the main card and lift effect */
+        .portfolio-card-custom-shadow {
+            /* Using a cyan tint for the shadow */
+            box-shadow: 0 20px 25px -5px rgba(6, 182, 212, 0.1), 0 10px 10px -5px rgba(6, 182, 212, 0.04);
+            transition: all 0.3s ease-in-out;
+        }
+        .portfolio-card-custom-shadow:hover {
+            /* Deeper shadow on hover */
+            box-shadow: 0 30px 40px -10px rgba(6, 182, 212, 0.2), 0 15px 15px -7px rgba(6, 182, 212, 0.08);
+            /* Lifts the card slightly */
+            transform: translateY(-5px); 
+        }
+
+        /* Simple Fade-in Animation for page load */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-4 sm:p-8">
 
     <!-- Main Portfolio Card Container -->
-    <div class="w-full max-w-4xl bg-white shadow-xl rounded-2xl overflow-hidden transform transition duration-500 hover:shadow-2xl">
+    <!-- The custom class replaces the default Tailwind shadow classes -->
+    <div class="w-full max-w-4xl bg-white rounded-2xl overflow-hidden portfolio-card-custom-shadow">
 
-        <!-- Header Section -->
-        <header class="bg-indigo-600 text-white p-6 sm:p-10 text-center">
+        <!-- Header Section (Vibrant Cyan) -->
+        <header class="bg-cyan-700 text-white p-6 sm:p-10 text-center">
             <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight">
                 Athulya K R
             </h1>
-            <p class="text-indigo-200 text-lg sm:text-xl font-medium">
+            <p class="text-cyan-100 text-lg sm:text-xl font-medium">
                 Aspiring Computer Science Engineer
             </p>
         </header>
@@ -34,7 +60,7 @@
 
             <!-- Profile Summary Section -->
             <section class="mb-10">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 pb-1 border-indigo-100">About Me</h2>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 pb-1 border-cyan-100">About Me</h2>
                 <div class="space-y-4 text-gray-700">
                     <p>
                         I am **Athulya K R**, an enthusiastic and dedicated student currently pursuing a BTech degree in Computer Science. Based in the vibrant cultural hub of **Thrissur, Kerala**, I am focused on leveraging my academic knowledge to build practical solutions in the field of technology.
@@ -45,11 +71,11 @@
                 </div>
             </section>
 
-            <!-- Education Section -->
+            <!-- Education Section (Amber Accent) -->
             <section class="mb-10">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 pb-1 border-indigo-100">Education</h2>
-                <div class="bg-indigo-50 p-6 rounded-xl shadow-md">
-                    <h3 class="text-xl font-semibold text-indigo-700">BTech in Computer Science</h3>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 pb-1 border-cyan-100">Education</h2>
+                <div class="bg-amber-50 p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold text-amber-800">BTech in Computer Science</h3>
                     <p class="text-lg text-gray-800 mt-1">Vidya Academy of Science And Technology</p>
                     <p class="text-sm text-gray-500 mt-2">
                         Currently enrolled, focusing on core CS concepts including Data Structures, Algorithms, Software Engineering, and Web Development.
@@ -59,11 +85,11 @@
 
             <!-- Location/Contact Section -->
             <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 pb-1 border-indigo-100">Contact & Location</h2>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 pb-1 border-cyan-100">Contact & Location</h2>
                 <div class="flex flex-col sm:flex-row gap-6">
                     <!-- Location Card -->
                     <div class="flex-1 bg-white border border-gray-200 p-4 rounded-xl shadow-sm flex items-start space-x-3">
-                        <svg class="w-6 h-6 text-indigo-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-6 h-6 text-cyan-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.727A8 8 0 016.343 4.273A8 8 0 0117.657 16.727zm0 0l-1.545 1.546-1.546-1.546"></path>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11V6"></path>
                         </svg>
@@ -75,7 +101,7 @@
 
                     <!-- Placeholder for Links/Contact -->
                     <div class="flex-1 bg-white border border-gray-200 p-4 rounded-xl shadow-sm flex items-start space-x-3">
-                        <svg class="w-6 h-6 text-indigo-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-6 h-6 text-cyan-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                         <div>
